@@ -1,1 +1,774 @@
-<h1>Edwin Aljibe</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edwin Aljibe — Personal Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & Variables ───────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:   #f5f0e8;
+      --ink:     #1a1510;
+      --warm:    #c8a96e;
+      --rust:    #b84c2b;
+      --muted:   #7a6f62;
+      --card-bg: #ffffff;
+      --border:  #e0d8cc;
+      --ff-head: 'Playfair Display', Georgia, serif;
+      --ff-body: 'DM Sans', sans-serif;
+      --radius:  4px;
+      --trans:   0.3s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--ff-body);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── Typography ──────────────────────────────────── */
+    h1, h2, h3 { font-family: var(--ff-head); line-height: 1.2; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Utility ─────────────────────────────────────── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    .section-label {
+      font-family: var(--ff-body);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--warm);
+      margin-bottom: 0.75rem;
+    }
+    .divider {
+      width: 3rem; height: 3px;
+      background: var(--rust);
+      margin: 1rem 0 2rem;
+    }
+
+    /* ── Nav ─────────────────────────────────────────── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--ink);
+      border-bottom: 2px solid var(--warm);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      font-family: var(--ff-head);
+      font-size: 1.3rem;
+      color: var(--cream);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--warm); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--cream);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 2px;
+      transition: color var(--trans);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: var(--warm);
+      transition: width var(--trans);
+    }
+
+    .nav-links a:hover { color: var(--warm); }
+    .nav-links a:hover::after { width: 100%; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--cream);
+      transition: var(--trans);
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ── Hero ────────────────────────────────────────── */
+    .hero {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 7rem 2rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: 'AR';
+      position: absolute;
+      right: -2rem; top: -1rem;
+      font-family: var(--ff-head);
+      font-size: clamp(8rem, 20vw, 18rem);
+      font-weight: 900;
+      color: rgba(255,255,255,0.04);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hero-inner { max-width: 1100px; margin: 0 auto; position: relative; }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--warm);
+      border: 1px solid var(--warm);
+      padding: 0.3rem 0.8rem;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1.0;
+      animation: fadeUp 0.7s 0.15s ease both;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--warm);
+    }
+
+    .hero-sub {
+      margin-top: 1.5rem;
+      font-size: 1.05rem;
+      color: rgba(245,240,232,0.7);
+      max-width: 480px;
+      font-weight: 300;
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 2.5rem;
+      padding: 0.85rem 2rem;
+      background: var(--rust);
+      color: var(--cream);
+      font-family: var(--ff-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background var(--trans), transform var(--trans);
+      animation: fadeUp 0.7s 0.45s ease both;
+    }
+    .hero-cta:hover { background: var(--warm); transform: translateY(-2px); }
+    .hero-cta svg { transition: transform var(--trans); }
+    .hero-cta:hover svg { transform: translateX(4px); }
+
+    /* ── Fun Fact Panel ──────────────────────────────── */
+    #fun-fact-panel {
+      display: none;
+      background: var(--warm);
+      color: var(--ink);
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem;
+      border-left: 4px solid var(--rust);
+      font-size: 0.95rem;
+      max-width: 520px;
+      animation: fadeUp 0.4s ease both;
+    }
+    #fun-fact-panel.visible { display: block; }
+    #fun-fact-panel strong { font-family: var(--ff-head); font-size: 1.05rem; }
+
+    /* ── Section Base ────────────────────────────────── */
+    section { padding: 5rem 2rem; }
+
+    /* ── About ───────────────────────────────────────── */
+    #about { background: var(--cream); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 4rem;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .about-image-wrap {
+      position: relative;
+    }
+
+    .about-image-wrap::before {
+      content: '';
+      position: absolute;
+      top: -12px; left: -12px;
+      width: 100%; height: 100%;
+      border: 2px solid var(--warm);
+      z-index: 0;
+    }
+
+    .about-img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      display: block;
+      position: relative;
+      z-index: 1;
+      filter: grayscale(20%);
+      transition: filter var(--trans), transform var(--trans);
+    }
+
+    .about-img:hover { filter: grayscale(0%); transform: translate(4px, 4px); }
+
+    /* Placeholder avatar using CSS */
+    .avatar-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, #2a2218 0%, #4a3828 50%, #2a2218 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      transition: transform var(--trans);
+    }
+    .avatar-placeholder:hover { transform: translate(4px, 4px); }
+    .avatar-circle {
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      background: var(--warm);
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+    .avatar-bar {
+      width: 60%; height: 10px;
+      background: rgba(200,169,110,0.4);
+      border-radius: 5px;
+      margin: 4px 0;
+    }
+    .avatar-bar.short { width: 40%; }
+    .avatar-label {
+      margin-top: 1.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.4);
+    }
+
+    .about-content h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .badge {
+      padding: 0.3rem 0.9rem;
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: background var(--trans), color var(--trans), border-color var(--trans);
+    }
+    .badge:hover {
+      background: var(--ink);
+      color: var(--cream);
+      border-color: var(--ink);
+    }
+
+    /* ── Hobbies ─────────────────────────────────────── */
+    #hobbies { background: #1a1510; color: var(--cream); }
+    #hobbies .section-label { color: var(--warm); }
+
+    .hobbies-header { max-width: 1100px; margin: 0 auto 3rem; }
+    .hobbies-header h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+    }
+
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5px;
+      max-width: 1100px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .hobby-card {
+      background: #1a1510;
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: background var(--trans);
+    }
+
+    .hobby-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 3px;
+      background: var(--warm);
+      transition: width 0.4s ease;
+    }
+    .hobby-card:hover { background: #231d16; }
+    .hobby-card:hover::before { width: 100%; }
+
+    .hobby-icon {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    .hobby-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      color: var(--cream);
+    }
+
+    .hobby-card p {
+      font-size: 0.9rem;
+      color: rgba(245,240,232,0.55);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ── Contact ─────────────────────────────────────── */
+    #contact { background: var(--cream); }
+
+    .contact-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-text h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+    }
+    .contact-text p { color: var(--muted); font-weight: 300; }
+
+    .contact-links { display: flex; flex-direction: column; gap: 1rem; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem 1.5rem;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      transition: border-color var(--trans), transform var(--trans), box-shadow var(--trans);
+    }
+
+    .contact-item:hover {
+      border-color: var(--warm);
+      transform: translateX(6px);
+      box-shadow: -4px 0 0 var(--warm);
+    }
+
+    .contact-icon {
+      width: 2.5rem; height: 2.5rem;
+      background: var(--ink);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+
+    .contact-info { flex: 1; }
+    .contact-platform {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .contact-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    /* ── Footer ──────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      color: rgba(245,240,232,0.4);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+    }
+    footer span { color: var(--warm); }
+
+    /* ── Animations ──────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive ──────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--ink);
+        flex-direction: column;
+        gap: 0;
+        border-top: 1px solid rgba(255,255,255,0.08);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li a {
+        display: block;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+      }
+      .nav-links a::after { display: none; }
+
+      header { position: relative; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .about-image-wrap { max-width: 320px; }
+
+      .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
+
+      .hero { padding: 4rem 1.5rem 3rem; }
+    }
+
+    @media (max-width: 480px) {
+      section { padding: 3.5rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER / NAV ─────────────────────────────────────── -->
+<header id="top">
+  <nav class="nav-inner" aria-label="Primary navigation">
+    <a href="#top" class="nav-logo">Alex <span>Rivera</span></a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ── HERO ────────────────────────────────────────────────── -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Personal Profile — 2025</div>
+    <h1>Hello, I'm<br><em>Alex Rivera.</em></h1>
+    <p class="hero-sub">Student · Creator · Curious Mind — exploring the intersection of technology, design, and storytelling.</p>
+
+    <button class="hero-cta" id="fun-fact-btn" aria-controls="fun-fact-panel">
+      Discover a Fun Fact
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+
+    <div id="fun-fact-panel" role="status" aria-live="polite">
+      <strong>Did you know?</strong> <span id="fun-fact-text"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ────────────────────────────────────────────────── -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-image-wrap reveal">
+      <!-- Styled placeholder — replace with <img> tag for a real photo -->
+      <div class="avatar-placeholder" role="img" aria-label="Profile photo of Alex Rivera">
+        <div class="avatar-circle"></div>
+        <div class="avatar-bar"></div>
+        <div class="avatar-bar short"></div>
+        <p class="avatar-label">Alex Rivera</p>
+      </div>
+    </div>
+
+    <div class="about-content reveal">
+      <p class="section-label">Who I Am</p>
+      <h2>About Me</h2>
+      <div class="divider"></div>
+      <p>Hi there! I'm Alex Rivera, a passionate student majoring in Information Technology at State University. I love building things for the web, solving puzzles, and finding creative ways to make technology more human.</p>
+      <p>When I'm not coding, you'll catch me sketching UI concepts in my notebook, hiking local trails, or losing track of time in a good fantasy novel. I believe great software starts with genuine curiosity.</p>
+      <p>I'm currently in my second year and actively looking for internship opportunities where I can contribute, learn, and grow alongside a talented team.</p>
+      <div class="badges">
+        <span class="badge">HTML &amp; CSS</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">UI Design</span>
+        <span class="badge">Python</span>
+        <span class="badge">Problem Solving</span>
+        <span class="badge">Team Player</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOBBIES ──────────────────────────────────────────────── -->
+<section id="hobbies">
+  <div class="hobbies-header reveal">
+    <p class="section-label">What I Love</p>
+    <h2>Hobbies &amp; Interests</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="hobbies-grid">
+    <article class="hobby-card reveal">
+      <span class="hobby-icon" aria-hidden="true">💻</span>
+      <h3>Web Development</h3>
+      <p>Building interactive web experiences from scratch brings me genuine joy. I enjoy experimenting with modern CSS layouts, JavaScript animations, and clean semantic markup that's both accessible and beautiful.</p>
+    </article>
+
+    <article class="hobby-card reveal">
+      <span class="hobby-icon" aria-hidden="true">🎨</span>
+      <h3>Digital Art &amp; Design</h3>
+      <p>I sketch interface concepts and create digital illustrations using Figma and Procreate. I'm fascinated by the way good design communicates emotion and guides attention without any words at all.</p>
+    </article>
+
+    <article class="hobby-card reveal">
+      <span class="hobby-icon" aria-hidden="true">🥾</span>
+      <h3>Trail Hiking</h3>
+      <p>Getting outdoors recharges my creativity. I've completed over 30 different trails in the past two years — from gentle forest walks to challenging ridge climbs with breathtaking panoramic views.</p>
+    </article>
+
+    <article class="hobby-card reveal">
+      <span class="hobby-icon" aria-hidden="true">📚</span>
+      <h3>Reading &amp; Writing</h3>
+      <p>Fantasy and sci-fi novels are my escape. I also keep a personal blog where I document my learning journey, share coding tips, and reflect on lessons I've picked up along the way.</p>
+    </article>
+
+    <article class="hobby-card reveal">
+      <span class="hobby-icon" aria-hidden="true">🎸</span>
+      <h3>Playing Guitar</h3>
+      <p>I've been playing acoustic guitar for four years. Music teaches me patience and precision — two skills that transfer surprisingly well into debugging stubborn code at 2 AM.</p>
+    </article>
+
+    <article class="hobby-card reveal">
+      <span class="hobby-icon" aria-hidden="true">☕</span>
+      <h3>Coffee Brewing</h3>
+      <p>I'm on a mission to master pour-over coffee. There's a meditative quality to the ritual — precise measurements, bloom time, slow pours — that pairs perfectly with a morning coding session.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ── CONTACT ──────────────────────────────────────────────── -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-text reveal">
+      <p class="section-label">Get In Touch</p>
+      <h2>Let's Connect</h2>
+      <div class="divider"></div>
+      <p>Whether you have a project in mind, an internship opportunity, or just want to say hello — my inbox is always open. I try to respond within 24 hours.</p>
+    </div>
+
+    <div class="contact-links reveal">
+      <!-- Email -->
+      <a href="mailto:alex.rivera@email.com" class="contact-item" aria-label="Send email to Alex Rivera">
+        <div class="contact-icon" aria-hidden="true">✉️</div>
+        <div class="contact-info">
+          <div class="contact-platform">Email</div>
+          <div class="contact-value">alex.rivera@email.com</div>
+        </div>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/alexrivera" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+        <div class="contact-icon" aria-hidden="true">🐙</div>
+        <div class="contact-info">
+          <div class="contact-platform">GitHub</div>
+          <div class="contact-value">github.com/alexrivera</div>
+        </div>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/alexrivera" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+        <div class="contact-icon" aria-hidden="true">💼</div>
+        <div class="contact-info">
+          <div class="contact-platform">LinkedIn</div>
+          <div class="contact-value">linkedin.com/in/alexrivera</div>
+        </div>
+      </a>
+
+      <!-- Twitter/X -->
+      <a href="https://twitter.com/alexrivera_dev" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X profile">
+        <div class="contact-icon" aria-hidden="true">🐦</div>
+        <div class="contact-info">
+          <div class="contact-platform">Twitter / X</div>
+          <div class="contact-value">@alexrivera_dev</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────────────────────── -->
+<footer>
+  <p>Designed &amp; built by <span>Alex Rivera</span> · 2025 · Hosted on GitHub Pages</p>
+</footer>
+
+<!-- ── JAVASCRIPT ───────────────────────────────────────────── -->
+<script>
+  /* ── Fun Facts ─────────────────────────────────── */
+  const funFacts = [
+    "I once built a fully working to-do app in under 45 minutes during a hackathon.",
+    "I type at 92 words per minute — and still make typos constantly.",
+    "My first website was a fan page for my favourite book series, built in 7th grade.",
+    "I've completed 5 online certifications in the past year alone.",
+    "I can name every HTTP status code from memory (yes, including 418 — I'm a Teapot).",
+    "I keep a physical 'bug journal' where I write down every tricky bug I solve."
+  ];
+
+  const btn       = document.getElementById('fun-fact-btn');
+  const panel     = document.getElementById('fun-fact-panel');
+  const factText  = document.getElementById('fun-fact-text');
+  let   lastIndex = -1;
+
+  btn.addEventListener('click', () => {
+    let idx;
+    do { idx = Math.floor(Math.random() * funFacts.length); }
+    while (idx === lastIndex && funFacts.length > 1);
+    lastIndex = idx;
+
+    factText.textContent = funFacts[idx];
+
+    // Toggle visibility with re-trigger animation
+    panel.classList.remove('visible');
+    void panel.offsetWidth; // reflow
+    panel.classList.add('visible');
+  });
+
+  /* ── Hamburger Menu ────────────────────────────── */
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+
+  // Close nav when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ── Scroll Reveal ─────────────────────────────── */
+  const revealEls = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // Stagger children in the same batch
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 80 * (i % 4));
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealEls.forEach(el => observer.observe(el));
+
+  /* ── Active nav highlighting on scroll ─────────── */
+  const sections = document.querySelectorAll('section[id]');
+  const navAnchors = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+    });
+    navAnchors.forEach(a => {
+      a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--warm)' : '';
+    });
+  }, { passive: true });
+</script>
+</body>
+</html>
+
