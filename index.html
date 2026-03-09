@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edwin Aljibe — Personal Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!------------ Header ------------>
+<header id="top">
+    <nav class="nav-inner" aria-label="Primary navigation">
+        <a href="#top" class="nav-logo">Edwin <span>Aljibe</span></a>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links" role="list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<!--------- Hero Section --------->
+<section class="hero" id="hero">
+    <div class="hero-inner">
+        <div class="hero-tag">Personal Profile — 2026</div>
+        <h1>Hello, I'm<br><em>Edwin Aljibe</em></h1>
+        <p class="hero-sub">Architect · Environmental Planner · Certified in Cybersecurity · Curious Mind — exploring the intersection of technology, arts, and science.</p>
+
+        <button class="hero-cta" id="fun-fact-btn" aria-controls="fun-fact-panel">
+            Discover a Fun Fact
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <div id="fun-fact-panel" role="status" aria-live="polite">
+            <strong>Did you know?</strong> <span id="fun-fact-text"></span>
+        </div>
+    </div>
+</section>
+<!----------- About Me ----------->
+<section id="about">
+    <div class="about-grid">
+        <div class="about-image-wrap reveal">
+            <img src="aljibeedwin.jpg" alt="Profile photo of Edwin Aljibe" class="about-img" />
+        </div>
+
+        <div class="about-content reveal">
+            <p class="section-label">Who I Am</p>
+            <h2>About Me</h2>
+            <div class="divider"></div>
+            <p>Hi there! I am Edwin Aljibe, an experienced Architect and Environmental Planner with expertise in Building Information Modeling (BIM), digital transformation, and sustainable design. As a Certified Autodesk Professional in Revit, LEED Green Associate, and cybersecurity-certified professional, I bring a multidisciplinary approach that integrates architecture, technology, and information security.</p>
+            <div class="credentials">
+                <p class="section-label">Credentials</p>
+                <div class="credential-logos">
+
+                    <div class="credential-item">
+                        <img src="uap.png" alt="Architect" class="credential-img" />
+                        <span class="credential-name">Architect</span>
+                    </div>
+
+                    <div class="credential-item">
+                        <img src="piep.png" alt="Environmental Planner" class="credential-img" />
+                        <span class="credential-name">Environmental Planner</span>
+                    </div>
+
+                    <div class="credential-item">
+                        <img src="leed.png" alt="LEED Green Associate" class="credential-img" />
+                        <span class="credential-name">LEED Green Associate</span>
+                    </div>
+
+                    <div class="credential-item">
+                        <img src="revit.png" alt="Autodesk Certified  Professional" class="credential-img" />
+                        <span class="credential-name">Autodesk Certified  Professional</span>
+                    </div>
+
+                    <div class="credential-item">
+                        <img src="cc.png" alt="Certified in Cybersecurity" class="credential-img" />
+                        <span class="credential-name">Certified in Cybersecurity</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!------ Hobbies & Interests ----->
+<section id="hobbies">
+    <div class="hobbies-header reveal">
+        <p class="section-label">What I Love</p>
+        <h2>Hobbies &amp; Interests</h2>
+        <div class="divider"></div>
+    </div>
+
+    <div class="hobbies-grid">
+        <article class="hobby-card reveal">
+            <span class="hobby-icon" aria-hidden="true">💻</span>
+            <h3>Cybersecurity</h3>
+            <p>Cybersecurity fascinates me because it combines creativity and logic. I approach security challenges like solving a sudoku puzzle-analyzing patterns, testing possibilities, and discovering multiple paths to protect systems and information.</p>
+        </article>
+
+        <article class="hobby-card reveal">
+            <span class="hobby-icon" aria-hidden="true">🎨</span>
+            <h3>Design</h3>
+            <p>I’m passionate about drawing and visualizing built environments, blending creativity with technology. Using digital tools, especially BIM allows me to explore innovative design solutions while shaping spaces that are both functional and inspiring.</p>
+        </article>
+
+        <article class="hobby-card reveal">
+            <span class="hobby-icon" aria-hidden="true">🥾</span>
+            <h3>Travel</h3>
+            <p>I enjoy traveling abroad for both leisure and work, exploring diverse landscapes, cultures, and heritage. Experiencing new places broadens my perspective and continually inspires my professional and creative outlook.</p>
+        </article>
+    </div>
+</section>
+<!--------- Contact Info --------->
+<section id="contact">
+    <div class="contact-inner">
+        <div class="contact-text reveal">
+            <p class="section-label">Get In Touch</p>
+            <h2>Let's Connect</h2>
+            <div class="divider"></div>
+            <p>If you are considering a collaboration, offering an internship opportunity, or simply wish to reach out, I welcome your message. My inbox remains open, and I make it a priority to respond within 24 hours.</p>
+        </div>
+
+        <div class="contact-links reveal">
+            <a href="mailto:edwin_aljibe@yahoo.com" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="Send email to Edwin Aljibe">
+                <div class="contact-icon" aria-hidden="true">✉️</div>
+                <div class="contact-info">
+                    <div class="contact-platform">Email</div>
+                    <div class="contact-value">edwin_aljibe@yahoo.com</div>
+                </div>
+            </a>
+
+            <a href="https://github.com/EdwinAljibe" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                <div class="contact-icon" aria-hidden="true">🐙</div>
+                <div class="contact-info">
+                    <div class="contact-platform">GitHub</div>
+                    <div class="contact-value">github.com/EdwinAljibe</div>
+                </div>
+            </a>
+
+            <a href="https://www.credly.com/users/aljibeedwin" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="Credly profile">
+                <div class="contact-icon" aria-hidden="true">🐦</div>
+                <div class="contact-info">
+                    <div class="contact-platform">Credly</div>
+                    <div class="contact-value">Edwin Aljibe</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>Designed &amp; built by <span>Edwin Aljibe</span> · 2026 · Hosted on GitHub Pages</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
