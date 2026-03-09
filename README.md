@@ -18,7 +18,7 @@ I built this project to practice:
 
 B. Files Included
 
-project-root/
+aljibeedwin.github.io/
 |
 |___ index.html          - The main webpage
 |___ styles.css          - All the colors, fonts, and layout styles
@@ -54,7 +54,7 @@ D. Features
 
 Layout & Structure
 - Four sections: Hero (intro), About Me, Hobbies & Interests, and Contact
-- Proper HTML tags like <header>, <section>, <article>, and <footer>
+- Proper HTML tags like header, section, article, and footer
 - Alt text on all images for accessibility
 
 Navigation
