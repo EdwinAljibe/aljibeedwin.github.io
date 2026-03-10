@@ -19,20 +19,20 @@ I built this project to practice:
 B. Files Included
 
 aljibeedwin.github.io/ 
-|
-|___ index.html (The main webpage)
-|___ styles.css (All the colors, fonts, and layout styles)
-|___ script.js (The interactive parts: button, menu, animations)
-|___ README.md (This file)
-|
-|___ aljibeedwin.jpg (My profile photo)
-|
-|___ logos/ (Credential badge images)
-    |___ uap.png (Architect)
-    |___ piep.png (Environmental Planner)
-    |___ leed.png (LEED Green Associate)
-    |___ revit.png (Autodesk Certified Professional)
-    |___ cc.png (Certified in Cybersecurity)
+l
+l___ index.html (The main webpage)
+l___ styles.css (All the colors, fonts, and layout styles)
+l___ script.js (The interactive parts: button, menu, animations)
+l___ README.md (This file)
+l
+l___ aljibeedwin.jpg (My profile photo)
+l
+l___ logos/ (Credential badge images)
+    l___ uap.png (Architect)
+    l___ piep.png (Environmental Planner)
+    l___ leed.png (LEED Green Associate)
+    l___ revit.png (Autodesk Certified Professional)
+    l___ cc.png (Certified in Cybersecurity)
 
 The three main files work together like this: HTML builds the structure, CSS makes it look good, and JavaScript makes it interactive.
 
