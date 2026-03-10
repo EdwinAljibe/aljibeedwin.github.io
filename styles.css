@@ -307,7 +307,7 @@ section { padding: 5rem 2rem; }
 
 .credential-name {
     font-size: 0.30rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--muted);
     text-align: center;
