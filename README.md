@@ -6,7 +6,8 @@ A simple personal profile website made for CMSC 207 Web Programming and Developm
 
 A. What This Project Is About
 
-This is a one-page website that introduces me - Edwin Aljibe - as an Architect, Environmental Planner, and cybersecurity-certified professional. It shows my credentials, hobbies, and contact information in a clean and organized way.
+This is a one-page website that introduces me - Edwin Aljibe - as an Architect, Environmental Planner, and cybersecurity-certified professional. 
+It shows my credentials, hobbies, and contact information in a clean and organized way.
 
 I built this project to practice:
 - Writing proper HTML page structure
