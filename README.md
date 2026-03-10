@@ -98,12 +98,12 @@ https://edwinaljibe.github.io/aljibeedwin.github.io/
 
 F. How to Customize It
 
-What you want to change:    | Where to edit it:
-Name, bio, or section text	| index.html
-Colors and fonts		        | :root variables at the top of styles.css
-Fun fact button text		    | funFacts array in script.js
-Profile photo			          | Replace aljibeedwin.jpg with your desired image
-Credential logos		        | Swap PNG files inside the logos/ folder
+What you want to change:     Where to edit it:
+Name, bio, or section text	 index.html
+Colors and fonts		     root variables at the top of styles.css
+Fun fact button text		 funFacts array in script.js
+Profile photo			     Replace aljibeedwin.jpg with your desired image
+Credential logos		     Swap PNG files inside the logos/ folder
 
 ---------------------------------------------
 
