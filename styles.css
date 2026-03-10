@@ -295,7 +295,7 @@ section { padding: 5rem 2rem; }
 .credential-item:hover {
     border-color: var(--warm);
     transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
 .credential-img {
@@ -306,7 +306,7 @@ section { padding: 5rem 2rem; }
 }
 
 .credential-name {
-    font-size: 0.65rem;
+    font-size: 0.60rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--muted);
