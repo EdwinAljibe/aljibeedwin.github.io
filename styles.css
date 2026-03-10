@@ -423,6 +423,14 @@ section { padding: 5rem 2rem; }
     font-size: 1rem;
 }
 
+.contact-icon--yahoo   { background: #6001D2; }
+.contact-icon--github  { background: #24292e; }
+.contact-icon--credly  { background: #FF6B00; }
+
+.contact-item:hover .contact-icon--yahoo  { background: #7b00ff; }
+.contact-item:hover .contact-icon--github { background: #3a3f47; }
+.contact-item:hover .contact-icon--credly { background: #e05e00; }
+
 .contact-info { flex: 1; }
 .contact-platform {
     font-size: 0.65rem;
