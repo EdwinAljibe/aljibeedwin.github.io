@@ -1,6 +1,6 @@
 /*--------------- Fun Facts ---------------*/
 const funFacts = [
-    "I usually wake up at 3:33 a.m.—perfect time to dive into my Kindle adventures.",
+    "I usually wake up at 3:33 a.m.- perfect time to dive into my Kindle adventures.",
     "Wherever I go, my trusty sudoku puzzle tags along… because life’s too short not to play!"
 ];
 
