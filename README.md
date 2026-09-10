@@ -1,6 +1,6 @@
 Edwin Aljibe - Personal Profile Website
 
-A simple personal profile website made for CMSC 207 Web Programming and Development course mini project.
+A simple personal profile website made for Web Programming and Development course project.
 
 ---------------------------------------------
 
@@ -74,7 +74,7 @@ Hobbies & Interests
 - Each card has a hover animation
 
 Contact
-- Links to my Email, GitHub, and Credly profile
+- Links to my Linkedin, GitHub, and Credly profile
 - All links open in a new tab
 
 Responsive Design
@@ -121,12 +121,11 @@ G. Possible Future Improvements
 H. Credits
 
 - Built by: Edwin Aljibe  
-- Course: CMSC 207 Web Programming and Development  
-- Reference: Create with Code: Build Your Own Website by Clyde Hatter
+
 ---------------------------------------------
 
 I. Contact
-- edwin_aljibe@yahoo.com
+- www.linkedin.com/in/aljibeedwin
 - github.com/EdwinAljibe
 - credly.com/users/aljibeedwin
 
