@@ -125,8 +125,8 @@ H. Credits
 ---------------------------------------------
 
 I. Contact
-- www.linkedin.com/in/aljibeedwin
-- github.com/EdwinAljibe
-- credly.com/users/aljibeedwin
+- Linkedin profile
+- Github profile
+- Credly profile
 
 -2026 Hosted on GitHub Pages-
