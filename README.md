@@ -93,7 +93,7 @@ Option 1: Open it directly on your computer
 Option 2: View it live on GitHub Pages
 The site is hosted at:
 
-https://edwinaljibe.github.io/
+https://edwinaljibe.github.io/aljibeedwin.github.io/
 
 ---------------------------------------------
 
