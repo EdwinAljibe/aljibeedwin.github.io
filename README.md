@@ -125,7 +125,7 @@ H. Credits
 ---------------------------------------------
 
 I. Contact
-- Linkedin profile
+- LinkedIn profile
 - Github profile
 - Credly profile
 
