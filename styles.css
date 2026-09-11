@@ -423,11 +423,11 @@ section { padding: 5rem 2rem; }
     font-size: 1rem;
 }
 
-.contact-icon--linkedin { background: #6001D2; }
+.contact-icon--linkedin { background: #0A66C2; }
 .contact-icon--github  { background: #24292e; }
 .contact-icon--credly  { background: #FF6B00; }
 
-.contact-item:hover .contact-icon--linkedin  { background: #7b00ff; }
+.contact-item:hover .contact-icon--linkedin  { background: #084d92; }
 .contact-item:hover .contact-icon--github { background: #3a3f47; }
 .contact-item:hover .contact-icon--credly { background: #e05e00; }
 
